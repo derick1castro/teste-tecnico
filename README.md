@@ -3,7 +3,7 @@
 ![Resultate](https://user-images.githubusercontent.com/104864411/221714599-dafaf5db-9dba-40b9-a0b3-37f05bf4f3a9.png)
 
 
-> Projeto Landing Page na qual foi proposto como um teste técnico pela empresa Resultate. O projeto consiste em uma Landing Page com formulário.
+> Projeto Landing Page na qual foi proposto como um teste técnico pela empresa Resultate. O projeto consiste em uma Landing Page com validação de formulário.
 
 ## 💻 Técnologia utilizadas no projeto
 * React
@@ -47,5 +47,3 @@ Para contribuir com Landing-Page_Resultate_Derick_Castro, siga estas etapas:
 
 Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-
-[⬆ Voltar ao topo](#Landing-Page_Resultate_Derick_Castro)<br>
