@@ -1,0 +1,51 @@
+@use "../../styles/base/variables";
+@use "../../styles/base/breakpoints";
+
+// Variáveis
+$navbar-bg-color: #1e1e22;
+$navbar-link-color: white;
+$navbar-link-font-size: 26px;
+$navbar-link-font-weight: 900;
+$navbar-link-letter-spacing: 0.5em;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout-navbar {
+  background-color: $navbar-bg-color;
+  padding-block: 16px;
+
+  @include flex-center;
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    li:nth-child(1) {
+      padding-right: 48px;
+      border-right: 2px solid #b4d3e0;
+      height: 42px;
+
+      @include flex-center;
+    }
+    li:nth-child(2) {
+      padding-left: 48px;
+    }
+
+    a {
+      color: $navbar-link-color;
+      font-weight: $navbar-link-font-weight;
+      letter-spacing: $navbar-link-letter-spacing;
+      text-decoration: none;
+      font-size: $navbar-link-font-size;
+
+      &:focus {
+        color: #fec80e;
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+@use "../../styles/base/variables";
+@use "../../styles/base/breakpoints";
+
+// Mixins
+@mixin abs-pos($left, $top) {
+  position: absolute;
+  left: $left;
+  top: $top;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Variáveis
+$polo-bg-color: rgba(30, 30, 34, 0.9);
+$info-bg-color: #f0f0f0;
+$title-bg-color: #b4d3e0;
+$title-width: 94px;
+$title-padding: 23px;
+$title-height: 100px;
+$title-line-height: 1.8rem;
+$info-height: 142px;
+$bonus-width: 315px;
+$bonus-height: $title-height;
+$bonus-padding-left: $title-padding;
+$font-size: 26px;
+$font-weight: 400;
+$letter-spacing: 12px;
+
+.main-car {
+  flex-direction: column;
+  width: 47rem;
+  @include center;
+  margin-bottom: 15.8rem;
+
+  &__car {
+    width: 492px;
+    background: $polo-bg-color;
+    position: relative;
+  }
+
+  &__polo,
+  &__up {
+    @include abs-pos(20%, 42%);
+    width: 42rem;
+  }
+
+  &__text {
+    @include abs-pos(30%, 38.3%);
+    color: white;
+    z-index: 1;
+    font-size: $font-size;
+    letter-spacing: $letter-spacing;
+    font-weight: $font-weight;
+    letter-spacing: 13px;
+  }
+
+  &__info {
+    font-size: $font-size;
+    height: $info-height;
+    @include center;
+    width: 492px;
+    background-color: $info-bg-color;
+    text-align: left;
+    margin-top: 109px;
+
+    span {
+      font-weight: 900;
+    }
+  }
+
+  &__title {
+    width: $title-width;
+    text-align: center;
+    border-right: 1px solid $title-bg-color;
+    height: $title-height;
+    padding-inline: $title-padding;
+    line-height: $title-line-height;
+    flex-direction: column;
+    @include center;
+  }
+
+  &__bonus {
+    height: $bonus-height;
+    padding-left: $bonus-padding-left;
+    width: $bonus-width;
+    line-height: $title-line-height;
+    @include center;
+  }
+}
+
+.main-total {
+  display: flex;
+  justify-content: center;
+}
